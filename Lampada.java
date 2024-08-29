@@ -4,20 +4,19 @@ public class Lampada
 {
     private boolean energizado;
     
-    
     public static void main(String[] args)
     {
         Lampada lampada1 = new Lampada();
-        
-        displayLampada(lampada1);
+   
+        lampada1.displayLampada();
         
         lampada1.energizar();
         
-        displayLampada(lampada1);
+        lampada1.displayLampada();
 
         lampada1.desenergizar();
         
-        displayLampada(lampada1);
+        lampada1.displayLampada();
     }
     
     public Lampada()
@@ -25,10 +24,10 @@ public class Lampada
         this.energizado = false;
     }
     
-    public static void displayLampada(Lampada lampada)
+    public void displayLampada()
     {
         System.out.printf("A lampada está ");
-        if(lampada.mostrarEstado())
+        if(this.mostrarEstado())
             System.out.println("energizada");
         else
             System.out.println("desenergizada");
